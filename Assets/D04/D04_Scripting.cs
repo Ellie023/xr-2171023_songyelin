@@ -1,23 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using UnityEngine;
-public class D04_Sriipting : MonoBehaviour
+
+public class D04_Scripting : MonoBehaviour
 {
-    MeshFilter ThisMeshFilter;
-    public GameObject Sphere, Capsule;
+    // Start is called before the first frame update
     void Start()
     {
-        ThisMeshFilter = GetComponent<MeshFilter>();
+        print("Hello world");
+        Debug.Log(gameObject.name);
     }
+
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            ThisMeshFilter.mesh = Sphere.GetComponent<MeshFilter>().mesh;
+            transform.Translate(0, 0, 1.5f);
         }
-        if (Input.GetMouseButtonDown(1))
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.Rotate(0, -1, 0);
+            }
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            ThisMeshFilter.mesh = Capsule.GetComponent<MeshFilter>().mesh;
+            transform.Rotate(0, 1, 0);
         }
+
     }
 }
