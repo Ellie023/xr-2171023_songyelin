@@ -552,8 +552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fe2af3a1988b044ba52e3cce484fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sphere: {fileID: 0}
-  Capsule: {fileID: 0}
+  Sphere: {fileID: 167284677}
+  Capsule: {fileID: 1689344141}
 --- !u!65 &1738843623
 BoxCollider:
   m_ObjectHideFlags: 0
